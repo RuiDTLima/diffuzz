@@ -1,0 +1,8 @@
+Input file; Time; Memory; Instr.; User-Defined
+fuzzer-out-1/afl/queue/id:000000,orig:example.txt; 0; 0; 0; 0
+fuzzer-out-1/afl/queue/id:000001,src:000000,op:havoc,rep:8,+cov,highscore; 6534328; 126877696; 227; 383
+fuzzer-out-1/afl/queue/id:000002,src:000000,op:havoc,rep:16,+cov; 1959392; 126877696; 230; 380
+fuzzer-out-1/afl/queue/id:000003,src:000000,op:havoc,rep:64,+cov; 1181408; 126877696; 610; 0
+fuzzer-out-1/afl/queue/id:000004,src:000000,op:havoc,rep:4; 1026212; 126877696; 233; 377
+fuzzer-out-1/afl/queue/id:000005,src:000000,op:havoc,rep:16; 1094944; 126877696; 236; 374
+fuzzer-out-1/afl/queue/id:000006,src:000000,op:havoc,rep:128; 1174060; 126877696; 239; 371
