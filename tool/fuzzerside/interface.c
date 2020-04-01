@@ -197,7 +197,7 @@ int main(int argc, char** argv) {
         DIE("Fork failed\n");
       } else if (child_pid == 0) {
         LOGIFVERBOSE("Child process, continue after pork server loop\n");
-  break;
+        break;
       }
 
       LOGIFVERBOSE("Child PID: %d\n", child_pid);
