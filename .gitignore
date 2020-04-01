@@ -22,10 +22,6 @@ tool/instrumentor/bin/
 tool/instrumentor/.gradle
 tool/instrumentor/build
 tool/instrumentor/.settings/
-evaluation/*/fuzzer-out-1/
-evaluation/*/fuzzer-out-2/
-evaluation/*/fuzzer-out-3/
-evaluation/*/fuzzer-out-4/
-evaluation/*/fuzzer-out-5/
+evaluation/*/fuzzer-out*
 *-log-*.txt
 *.lock
