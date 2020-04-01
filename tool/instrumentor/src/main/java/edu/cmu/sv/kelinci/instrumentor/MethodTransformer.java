@@ -65,22 +65,22 @@ public class MethodTransformer extends MethodVisitor {
 		mv.visitFieldInsn(GETSTATIC, "edu/cmu/sv/kelinci/Mem", "mem", "[B");
 		mv.visitLdcInsn(id);
 		mv.visitFieldInsn(GETSTATIC, "edu/cmu/sv/kelinci/Mem", "prev_location", "I");
-		mv.visitInsn(IXOR);
-		mv.visitInsn(DUP2);
-		mv.visitInsn(BALOAD);
-		mv.visitInsn(ICONST_1);
-		mv.visitInsn(IADD);
-		mv.visitInsn(I2B);
-		mv.visitInsn(BASTORE);
-		mv.visitIntInsn(SIPUSH, (id >> 1));
+		mv.visitInsn(IXOR);	//	bitwise int xor operation
+		mv.visitInsn(DUP2);	//	duplicate the top two operand stack words
+		mv.visitInsn(BALOAD);	//	load byte or boolean from array
+		mv.visitInsn(ICONST_1);	//	push value 1
+		mv.visitInsn(IADD);	//	Add ints
+		mv.visitInsn(I2B);	//	Convert int to byte
+		mv.visitInsn(BASTORE);	// Store into byte or boolean array
+		mv.visitIntInsn(SIPUSH, (id >> 1));	//	Push short
 		mv.visitFieldInsn(PUTSTATIC, "edu/cmu/sv/kelinci/Mem", "prev_location", "I");
 	}
 	
     private void instrumentForCounting() {
         // RK: experimental
         mv.visitFieldInsn(GETSTATIC, "edu/cmu/sv/kelinci/Mem", "instrCost", "J");
-        mv.visitInsn(LCONST_1);
-        mv.visitInsn(LADD);
+        mv.visitInsn(LCONST_1);	//	Push value 1
+        mv.visitInsn(LADD);	//	Add longs
         mv.visitFieldInsn(PUTSTATIC, "edu/cmu/sv/kelinci/Mem", "instrCost", "J");
     }
 

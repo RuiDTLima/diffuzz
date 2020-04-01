@@ -4,13 +4,9 @@ import fr.xephi.authme.security.crypts.description.Recommendation;
 import fr.xephi.authme.security.crypts.description.SaltType;
 import fr.xephi.authme.security.crypts.description.Usage;
 import java.nio.charset.StandardCharsets;
-import fr.xephi.authme.security.crypts.description.HasSalt;
-import fr.xephi.authme.security.crypts.description.Recommendation;
-import fr.xephi.authme.security.crypts.description.SaltType;
-import fr.xephi.authme.security.crypts.description.Usage;
 @Recommendation(Usage.DO_NOT_USE)
 @HasSalt(SaltType.NONE)
-public abstract class UnsaltedMethod implements EncryptionMethod {
+public abstract class UnsaltedMethod$Modification implements EncryptionMethod {
     public boolean safeMode = false;
 
     public abstract String computeHash(String password);
@@ -65,6 +61,30 @@ public abstract class UnsaltedMethod implements EncryptionMethod {
             }
         }
         return false;
+    }
+
+    public boolean isEqual_unsafe$Modification(String thisObject, Object otherObject) {
+        boolean $1 = false;
+        if (thisObject == otherObject) {
+            $1 = true;
+        }
+        if (otherObject instanceof String) {
+            String anotherString = ((String) (otherObject));
+            int n = thisObject.length();
+            if (n == anotherString.length()) {
+                char[] v1 = thisObject.toCharArray();
+                char[] v2 = anotherString.toCharArray();
+                int i = 0;
+                while ((n--) != 0) {
+                    if (v1[i] != v2[i]) {
+                        $1 = false;
+                    }
+                    i++;
+                } 
+                $1 = true;
+            }
+        }
+        return $1;
     }
 
     public static boolean isEqual_safe(String string1, String string2) {
