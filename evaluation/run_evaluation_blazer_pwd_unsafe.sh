@@ -10,7 +10,11 @@ trap "exit" INT
 
 # Ask user.
 # 58 subjects, 5 times, 30min
+<<<<<<< HEAD
 read -p "Do you really want to run the complete evaluation? It might take around **5 hours**? " -n 1 -r
+=======
+read -p "Do you really want to run the complete evaluation? It will take around **6 days**? " -n 1 -r
+>>>>>>> 00953e6bfd808f9b5ac8c5961531eaffe7d4ac08
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then

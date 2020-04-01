@@ -31,4 +31,8 @@ rm -rf bin-instr
 java -cp ../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
+<<<<<<< HEAD
+=======
+
+>>>>>>> 00953e6bfd808f9b5ac8c5961531eaffe7d4ac08
 echo "Done."
