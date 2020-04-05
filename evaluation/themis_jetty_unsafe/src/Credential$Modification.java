@@ -44,7 +44,7 @@ public class Credential$Modification {
             char[] v2 = s2.toCharArray();
             int i = 0;
             while ((n--) != 0) {
-                if (v1[i] != v2[i]) {
+                if (i < v1.length && i < v2.length && v1[i] != v2[i]) {
                     $1 = false;
                 }
                 i++;

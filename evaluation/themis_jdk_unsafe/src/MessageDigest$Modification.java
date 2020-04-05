@@ -18,7 +18,7 @@ public abstract class MessageDigest$Modification extends MessageDigestSpi {
             $1 = false;
         }
         for (int i = 0; i < digesta.length; i++) {
-            if (digesta[i] != digestb[i]) {
+            if (i < digesta.length && i < digestb.length && digesta[i] != digestb[i]) {
                 $1 = false;
             }
         }
