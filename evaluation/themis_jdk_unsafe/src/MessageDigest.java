@@ -10,7 +10,7 @@ public abstract class MessageDigest extends MessageDigestSpi {
      *
      * @return true if the digests are equal, false otherwise.
      */
-    public static boolean isEqual_unsafe(byte digesta[], byte digestb[]) {
+    /*public static boolean isEqual_unsafe(byte digesta[], byte digestb[]) {
         if (digesta.length != digestb.length)
             return false;
 
@@ -20,6 +20,19 @@ public abstract class MessageDigest extends MessageDigestSpi {
             }
         }
         return true;
+    }*/
+
+    public static boolean isEqual_unsafebyte[] digesta, byte[] digestb) {
+        boolean $1 = true;
+        if (digesta.length != digestb.length) {
+            $1 = false;
+        }
+        for (int i = 0; i < digesta.length; i++) {
+            if (i < digesta.length && i < digestb.length && digesta[i] != digestb[i]) {
+                $1 = false;
+            }
+        }
+        return $1;
     }
 
     public static boolean isEqual_safe(byte[] digesta, byte[] digestb) {

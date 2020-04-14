@@ -51,7 +51,7 @@ public abstract class PasswordCredentials implements Credentials {
             return password;
         }
 
-        @Override
+        /*@Override
         public boolean equals(Object other) {
             if (this == other) {
                 return true;
@@ -64,6 +64,20 @@ public abstract class PasswordCredentials implements Credentials {
 
             // return Arrays.equals(password, impl.password);
             return ArraysIsEquals(password, impl.password);
+        }*/
+
+        @Override
+        public boolean equals(Object other) {
+            boolean $1;
+            if (PasswordCredentials.Impl.this == other) {
+                $1 = true;
+            }
+            if ((other == null) || (getClass() != other.getClass())) {
+                $1 = false;
+            }
+            PasswordCredentials.Impl impl = ((PasswordCredentials.Impl) (other));
+            $1 = ArraysIsEquals(password, impl.password);
+            return $1;
         }
 
         /* YN: inline */

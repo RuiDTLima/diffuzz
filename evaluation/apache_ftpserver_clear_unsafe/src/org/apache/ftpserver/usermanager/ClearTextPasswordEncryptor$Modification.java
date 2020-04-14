@@ -54,7 +54,7 @@ public class ClearTextPasswordEncryptor$Modification implements PasswordEncrypto
     public boolean isEqual_unsafe$Modification(String thisObject, Object otherObject) {
         boolean $1 = false;
         if (thisObject == otherObject) {
-            $1 = true;
+            return $1;
         }
         if (otherObject instanceof String) {
             String anotherString = ((String) (otherObject));
@@ -69,7 +69,7 @@ public class ClearTextPasswordEncryptor$Modification implements PasswordEncrypto
                     }
                     i++;
                 } 
-                $1 = true;
+                return $1;
             }
         }
         return $1;
