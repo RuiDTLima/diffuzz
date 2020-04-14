@@ -23,6 +23,7 @@ tool/instrumentor/.gradle
 tool/instrumentor/build
 tool/instrumentor/.settings/
 evaluation/*/fuzzer-out*
+evaluation/SucessFullExamples/*/fuzzer-out*
 evaluation/*/target
 *-log-*.txt
 *.lock

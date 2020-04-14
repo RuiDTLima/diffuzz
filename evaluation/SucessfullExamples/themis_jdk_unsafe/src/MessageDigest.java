@@ -22,7 +22,7 @@ public abstract class MessageDigest extends MessageDigestSpi {
         return true;
     }*/
 
-    public static boolean isEqual_unsafebyte[] digesta, byte[] digestb) {
+    public static boolean isEqual_unsafe(byte[] digesta, byte[] digestb) {
         boolean $1 = true;
         if (digesta.length != digestb.length) {
             $1 = false;
