@@ -83,8 +83,8 @@ if __name__ == '__main__':
 
     # Write collected data
     headers = ['seconds', 'average_delta', 'std_error', 'maximum']
-    #outputFileName = fuzzerOutDir + "results-n=" + str(NUMBER_OF_EXPERIMENTS) + "-t=" + str(EXPERIMENT_TIMEOUT) + "-s=" + str(STEP_SIZE) + ".csv"
-    outputFileName = "result.csv"
+    outputFileName = fuzzerOutDir + "results-n=" + str(NUMBER_OF_EXPERIMENTS) + "-t=" + str(EXPERIMENT_TIMEOUT) + "-s=" + str(STEP_SIZE) + ".csv"
+    #outputFileName = "result.csv"
     print (outputFileName)
     with open(outputFileName, "w") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=headers)
