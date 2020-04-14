@@ -24,7 +24,6 @@ tool/instrumentor/build
 tool/instrumentor/.settings/
 evaluation/*/fuzzer-out*
 evaluation/SucessFullExamples/*/fuzzer-out*
-!evaluation/SucessFullExamples/*/*.csv
 evaluation/*/target
 *-log-*.txt
 *.lock
