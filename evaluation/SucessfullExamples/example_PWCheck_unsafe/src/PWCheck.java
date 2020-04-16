@@ -53,7 +53,7 @@ public class PWCheck {
         return matches;
     }*/
 
-    public static boolean pwcheck3_safe(byte[] guess, byte[] pw) {
+    /*public static boolean pwcheck3_safe(byte[] guess, byte[] pw) {
         int i;
         boolean unused;
         boolean matches = true;
@@ -72,5 +72,5 @@ public class PWCheck {
 
         return matches;
 
-    }
+    }*/
 }
