@@ -57,26 +57,6 @@ public final class TokenHandler$Modification {
     }
 
     public User parseUserFromToken_unsafe(String token) {
-        final String[] parts = token.split(SEPARATOR_SPLITTER);
-        if (((parts.length == 2) && (parts[0].length() > 0)) && (parts[1].length() > 0)) {
-            try {
-                final byte[] userBytes = fromBase64(parts[0]);
-                final byte[] hash = fromBase64(parts[1]);
-                boolean validHash = unsafe_isEqual(createHmac(userBytes), hash);
-                if (validHash) {
-                    final User user = fromJSON(userBytes);
-                    if (new Date().getTime() < user.getExpires()) {
-                        return user;
-                    }
-                    return user;
-                }
-            } catch (IllegalArgumentException e) {
-            }
-        }
-        return null;
-    }
-
-    public User parseUserFromToken_unsafe$Modification(String token) {
         User $1 = null;
         final String[] parts = token.split(SEPARATOR_SPLITTER);
         if (((parts.length == 2) && (parts[0].length() > 0)) && (parts[1].length() > 0)) {
@@ -125,6 +105,26 @@ public final class TokenHandler$Modification {
 
 
         return true;
+    }
+
+    public static boolean unsafe_isEqual$Modification(byte[] a, byte[] a2) {
+        boolean $1 = true;
+        if (a == a2) {
+            $1 = true;
+        }
+        if ((a == null) || (a2 == null)) {
+            $1 = false;
+        }
+        int length = a.length;
+        if (a2.length != length) {
+            $1 = false;
+        }
+        for (int i = 0; i < length; i++) {
+            if (i < a.length && i < a2.length && a[i] != a2[i]) {
+                $1 = false;
+            }
+        }
+        return $1;
     }
 
     public String createTokenForUser(User user) {
