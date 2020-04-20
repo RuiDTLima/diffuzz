@@ -73,7 +73,7 @@ public class Driver {
         long cost1;
         if (SAFE_MODE) {
             Mem.clear();
-            answer1 = PWCheck.pwcheck3_safe(public_guess, secret1_pw);
+            answer1 = PWCheck.pwcheck1_unsafe(public_guess, secret1_pw);
             cost1 = Mem.instrCost;
         } else {
             Mem.clear();
@@ -87,7 +87,7 @@ public class Driver {
         long cost2;
         if (SAFE_MODE) {
             Mem.clear();
-            answer2 = PWCheck.pwcheck3_safe(public_guess, secret2_pw);
+            answer2 = PWCheck.pwcheck1_unsafe(public_guess, secret2_pw);
             cost2 = Mem.instrCost;
         } else {
             Mem.clear();
