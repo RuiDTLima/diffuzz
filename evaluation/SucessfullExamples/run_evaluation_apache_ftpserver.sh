@@ -38,7 +38,7 @@ declare -a classpaths=(
 
 declare -a drivers=(
 "Driver_Clear" # "apache_ftpserver_clear_safe"
-"Driver_Clear" # "apache_ftpserver_clear_unsafe"
+"Driver_Clear2" # "apache_ftpserver_clear_unsafe"
 )
 
 # Check array sizes
@@ -72,7 +72,7 @@ do
     server_pid=$!
 
     # Start modified AFL
-    AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1 AFL_SKIP_CPUFREQ=1 nohup ../../tool/afl-2.51b-wca/afl-fuzz -i in_dir -o fuzzer-out-$j -c userdefined -S afl -t 999999999 ../../tool/fuzzerside/interface @@ > ./afl-log-$j.txt &
+    AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1 AFL_SKIP_CPUFREQ=1 nohup ../../../tool/afl-2.51b-wca/afl-fuzz -i in_dir -o fuzzer-out-$j -c userdefined -S afl -t 999999999 ../../../tool/fuzzerside/interface @@ > ./afl-log-$j.txt &
     afl_pid=$!
 
     # Wait for timebound

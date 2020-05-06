@@ -12,10 +12,10 @@ cd ./apache_ftpserver_clear_safe/
 rm -rf bin
 mkdir bin
 cd src
-javac -cp .:../../../tool/instrumentor/build/libs/kelinci.jar:../lib/* Driver_Clear.java -d ../bin
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar:../lib/* Driver_Clear.java -d ../bin
 cd ..
 rm -rf bin-instr
-java -cp ../../tool/instrumentor/build/libs/kelinci.jar:./lib/* edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar:./lib/* edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
 
@@ -25,10 +25,10 @@ cd ./apache_ftpserver_clear_unsafe/
 rm -rf bin
 mkdir bin
 cd src
-javac -cp .:../../../tool/instrumentor/build/libs/kelinci.jar:../lib/* Driver_Clear.java -d ../bin
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar:../lib/* Driver_Clear.java -d ../bin
 cd ..
 rm -rf bin-instr
-java -cp ../../tool/instrumentor/build/libs/kelinci.jar:./lib/* edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar:./lib/* edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
 
@@ -90,10 +90,10 @@ cd ./github_authmreloaded_safe/
 rm -rf bin
 mkdir bin
 cd src/main/java/
-javac -cp .:../../../../../tool/instrumentor/build/libs/kelinci.jar:../../../lib/* Driver.java -d ../../../bin
+javac -cp .:../../../../../../tool/instrumentor/build/libs/kelinci.jar:../../../lib/* Driver.java -d ../../../bin
 cd ../../../
 rm -rf bin-instr
-java -cp ../../tool/instrumentor/build/libs/kelinci.jar:./lib/* edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar:./lib/* edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
 
@@ -103,10 +103,10 @@ cd ./github_authmreloaded_unsafe/
 rm -rf bin
 mkdir bin
 cd src/main/java/
-javac -cp .:../../../../../tool/instrumentor/build/libs/kelinci.jar:../../../lib/* Driver.java -d ../../../bin
+javac -cp .:../../../../../../tool/instrumentor/build/libs/kelinci.jar:../../../lib/* Driver.java -d ../../../bin
 cd ../../../
 rm -rf bin-instr
-java -cp ../../tool/instrumentor/build/libs/kelinci.jar:./lib/* edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar:./lib/* edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
 
@@ -168,10 +168,10 @@ cd ./themis_jetty_safe/
 rm -rf bin
 mkdir bin
 cd src
-javac -cp .:../../../tool/instrumentor/build/libs/kelinci.jar Credential_FuzzDriver.java -d ../bin
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar Credential_FuzzDriver.java -d ../bin
 cd ..
 rm -rf bin-instr
-java -cp ../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
 
@@ -181,10 +181,10 @@ cd ./themis_jetty_unsafe/
 rm -rf bin
 mkdir bin
 cd src
-javac -cp .:../../../tool/instrumentor/build/libs/kelinci.jar Credential_FuzzDriver.java -d ../bin
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar Credential_FuzzDriver.java -d ../bin
 cd ..
 rm -rf bin-instr
-java -cp ../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
 
@@ -233,10 +233,10 @@ cd ./themis_picketbox_safe/
 rm -rf bin
 mkdir bin
 cd src
-javac -cp .:../../../tool/instrumentor/build/libs/kelinci.jar UsernamePasswordLoginModule_FuzzDriver.java -d ../bin
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar UsernamePasswordLoginModule_FuzzDriver.java -d ../bin
 cd ..
 rm -rf bin-instr
-java -cp ../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
 
@@ -246,10 +246,10 @@ cd ./themis_picketbox_unsafe/
 rm -rf bin
 mkdir bin
 cd src
-javac -cp .:../../../tool/instrumentor/build/libs/kelinci.jar UsernamePasswordLoginModule_FuzzDriver.java -d ../bin
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar UsernamePasswordLoginModule_FuzzDriver.java -d ../bin
 cd ..
 rm -rf bin-instr
-java -cp ../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
 cd ..
 echo ""
 
