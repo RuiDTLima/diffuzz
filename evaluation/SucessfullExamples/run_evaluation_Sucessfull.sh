@@ -27,48 +27,72 @@ time_bound=1800 #30min
 step_size_eval=30
 
 declare -a subjects=(
+"apache_ftpserver_clear_safe" # Zero Day
+"apache_ftpserver_clear_unsafe"
 "blazer_passwordEq_safe"
 "blazer_passwordEq_unsafe"
 "example_PWCheck_safe"
 "example_PWCheck_unsafe"
+"github_authmreloaded_safe"
+"github_authmreloaded_unsafe"
 "themis_jdk_safe"
 "themis_jdk_unsafe"
+"themis_jetty_safe" # Themis
+"themis_jetty_unsafe"
 "themis_tomcat_safe"
 "themis_tomcat_unsafe"
 "themis_orientdb_safe"
 "themis_orientdb_unsafe"
+"themis_picketbox_safe" # Themis
+"themis_picketbox_unsafe"
 "themis_boot-stateless-auth_safe"
 "themis_boot-stateless-auth_unsafe"
 "themis_oacc_unsafe"
 )
 
 declare -a classpaths=(
+"./bin-instr/:./lib/*" # "apache_ftpserver_clear_safe"
+"./bin-instr/:./lib/*" # "apache_ftpserver_clear_unsafe"
 "./bin-instr/" # "blazer_passwordEq_safe"
 "./bin-instr/" # "blazer_passwordEq_unsafe"
 "./bin-instr/" # "example_PWCheck_safe"
 "./bin-instr/" # "example_PWCheck_unsafe"
+"./bin-instr/:./lib/*" # "github_authmreloaded_safe"
+"./bin-instr/:./lib/*" # "github_authmreloaded_unsafe"
 "./bin-instr/" # "themis_jdk_safe"
 "./bin-instr/" # "themis_jdk_unsafe"
+"./bin-instr/" # "themis_jetty_safe"
+"./bin-instr/" # "themis_jetty_unsafe"
 "./bin-instr/:./lib/*" # "themis_tomcat_safe"
 "./bin-instr/:./lib/*" # "themis_tomcat_unsafe"
 "./bin-instr/:./lib/*" # "themis_orientdb_safe"
 "./bin-instr/:./lib/*" # "themis_orientdb_unsafe"
+"./bin-instr/" # "themis_picketbox_safe"
+"./bin-instr/" # "themis_picketbox_unsafe"
 "./bin-instr/:./lib/*" # "themis_boot-stateless-auth_safe"
 "./bin-instr/:./lib/*" # "themis_boot-stateless-auth_unsafe"
 "./bin-instr/:./lib/*" # "themis_oacc_unsafe"
 )
 
 declare -a drivers=(
+"Driver_Clear" # "apache_ftpserver_clear_safe"
+"Driver_Clear2" # "apache_ftpserver_clear_unsafe"
 "User_FuzzDriver" # "blazer_passwordEq_safe"
 "User_FuzzDriver" # "blazer_passwordEq_unsafe"
 "Driver" # "example_PWCheck_safe"
 "Driver" # "example_PWCheck_unsafe"
+"Driver" # "github_authmreloaded_safe"
+"Driver" # "github_authmreloaded_unsafe"
 "MessageDigest_FuzzDriver" # "themis_jdk_safe"
 "MessageDigest_FuzzDriver" # "themis_jdk_unsafe"
+"Credential_FuzzDriver" # "themis_jetty_safe"
+"Credential_FuzzDriver" # "themis_jetty_unsafe"
 "Tomcat_FuzzDriver" # "themis_tomcat_safe"
 "Tomcat_FuzzDriver" # "themis_tomcat_unsafe"
 "OSecurityManager_FuzzDriver" # "themis_orientdb_safe"
 "OSecurityManager_FuzzDriver" # "themis_orientdb_unsafe"
+"UsernamePasswordLoginModule_FuzzDriver" # "themis_picketbox_safe"
+"UsernamePasswordLoginModule_FuzzDriver" # "themis_picketbox_unsafe"
 "Driver2" # "themis_boot-stateless-auth_safe"
 "Driver2" # "themis_boot-stateless-auth_unsafe"
 "Driver" # "themis_oacc_unsafe"
@@ -105,7 +129,7 @@ do
     server_pid=$!
 
     # Start modified AFL
-    AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1 AFL_SKIP_CPUFREQ=1 nohup ../../tool/afl-2.51b-wca/afl-fuzz -i in_dir -o fuzzer-out-$j -c userdefined -S afl -t 999999999 ../../tool/fuzzerside/interface @@ > ./afl-log-$j.txt &
+    AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1 AFL_SKIP_CPUFREQ=1 nohup ../../../tool/afl-2.51b-wca/afl-fuzz -i in_dir -o fuzzer-out-$j -c userdefined -S afl -t 999999999 ../../../tool/fuzzerside/interface @@ > ./afl-log-$j.txt &
     afl_pid=$!
 
     # Wait for timebound
