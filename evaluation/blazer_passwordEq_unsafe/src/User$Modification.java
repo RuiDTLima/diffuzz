@@ -18,7 +18,7 @@ public class User$Modification {
         return equal;
     }
 
-    ppublic static boolean passwordsEqual_unsafe(String a, String b) {
+    public static boolean passwordsEqual_unsafe(String a, String b) {
         boolean equal = true;
         boolean shmequal = true;
         int aLen = a.length();
@@ -29,7 +29,6 @@ public class User$Modification {
         int min = Math.min(aLen, bLen);
         for (int i = 0; i < min; i++) {
             if (a.charAt(i) != b.charAt(i)) {
-                // equal = false;
                 return false;
             } else {
                 shmequal = true;

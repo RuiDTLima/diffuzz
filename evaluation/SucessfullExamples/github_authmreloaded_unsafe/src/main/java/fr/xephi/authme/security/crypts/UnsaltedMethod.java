@@ -44,7 +44,7 @@ public abstract class UnsaltedMethod implements EncryptionMethod {
         return false;
     }
 
-    public boolean isEqual_unsafe(String thisObject, Object otherObject) {
+    /*public boolean isEqual_unsafe(String thisObject, Object otherObject) {
         if (thisObject == otherObject) {
             return true;
         }
@@ -65,6 +65,31 @@ public abstract class UnsaltedMethod implements EncryptionMethod {
             }
         }
         return false;
+    }*/
+    
+    public boolean isEqual_unsafe(String thisObject, Object otherObject) {
+        boolean $1 = false;
+        if (thisObject == otherObject) {
+            $1 = true;
+        }
+        if (otherObject instanceof String) {
+            String anotherString = ((String) (otherObject));
+            int n = thisObject.length();
+            if (n == anotherString.length()) {
+                char[] v1 = thisObject.toCharArray();
+                char[] v2 = anotherString.toCharArray();
+                int i = 0;
+                $1 = true;
+                while ((n--) != 0) {
+                    if ((i < v1.length) && (i < v2.length) && v1[i] != v2[i]) {
+                        $1 = false;
+                    }
+                    i++;
+                } 
+                return $1;
+            }
+        }
+        return $1;
     }
 
     public static boolean isEqual_safe(String string1, String string2) {

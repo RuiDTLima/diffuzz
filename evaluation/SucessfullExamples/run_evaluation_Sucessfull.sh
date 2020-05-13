@@ -46,6 +46,8 @@ declare -a subjects=(
 "themis_picketbox_safe" # Themis
 "themis_picketbox_unsafe"
 "themis_oacc_unsafe"
+"themis_boot-stateless-auth_safe"
+"themis_boot-stateless-auth_unsafe"
 )
 
 declare -a classpaths=(
@@ -68,6 +70,8 @@ declare -a classpaths=(
 "./bin-instr/" # "themis_picketbox_safe"
 "./bin-instr/" # "themis_picketbox_unsafe"
 "./bin-instr/:./lib/*" # "themis_oacc_unsafe"
+"./bin-instr/:./lib/*" # "themis_boot-stateless-auth_safe"
+"./bin-instr/:./lib/*" # "themis_boot-stateless-auth_unsafe"
 )
 
 declare -a drivers=(
@@ -90,6 +94,8 @@ declare -a drivers=(
 "UsernamePasswordLoginModule_FuzzDriver" # "themis_picketbox_safe"
 "UsernamePasswordLoginModule_FuzzDriver" # "themis_picketbox_unsafe"
 "Driver" # "themis_oacc_unsafe"
+"Driver" # "themis_boot-stateless-auth_safe"
+"Driver" # "themis_boot-stateless-auth_unsafe"
 )
 
 # Check array sizes

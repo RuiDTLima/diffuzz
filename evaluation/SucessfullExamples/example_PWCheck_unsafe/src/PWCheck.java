@@ -23,7 +23,7 @@ public class PWCheck {
         }
         int i;
         for (i = 0; i < guess.length; i++) {
-            if (i < guess.length && i < pw.length && guess[i] != pw[i]) {
+            if ((i < guess.length) && (i < pw.length) && guess[i] != pw[i]) {
                 $1 = false;
             }
         }
