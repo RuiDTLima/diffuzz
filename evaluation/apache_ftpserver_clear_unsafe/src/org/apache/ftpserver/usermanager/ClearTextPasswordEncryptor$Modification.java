@@ -70,7 +70,6 @@ public class ClearTextPasswordEncryptor$Modification implements PasswordEncrypto
                     }
                     i++;
                 } 
-                return $1;
             }
         }
         return $1;
