@@ -1,0 +1,50 @@
+Do you really want to run the complete evaluation? It will take around **2,5 hours**? 
+Run complete evaluation...
+[1/10] Run analysis for themis_boot-stateless-auth_safe, round 1 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (12233) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (12232) - No such process
+[2/10] Run analysis for themis_boot-stateless-auth_safe, round 2 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (12692) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (12691) - No such process
+[3/10] Run analysis for themis_boot-stateless-auth_safe, round 3 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (13194) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (13193) - No such process
+[4/10] Run analysis for themis_boot-stateless-auth_safe, round 4 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (13659) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (13658) - No such process
+[5/10] Run analysis for themis_boot-stateless-auth_safe, round 5 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (14120) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (14119) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'themis_boot-stateless-auth_safe/fuzzer-out-1/afl/fuzzer_stats'
+[6/10] Run analysis for themis_boot-stateless-auth_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (14658) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (14657) - No such process
+[7/10] Run analysis for themis_boot-stateless-auth_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (15124) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (15123) - No such process
+[8/10] Run analysis for themis_boot-stateless-auth_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (15590) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (15589) - No such process
+[9/10] Run analysis for themis_boot-stateless-auth_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (16065) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (16064) - No such process
+[10/10] Run analysis for themis_boot-stateless-auth_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_evaluation_themis_boot-stateless-auth.sh: line 82: kill: (16535) - No such process
+./run_evaluation_themis_boot-stateless-auth.sh: line 83: kill: (16534) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'themis_boot-stateless-auth_unsafe/fuzzer-out-1/afl/fuzzer_stats'
