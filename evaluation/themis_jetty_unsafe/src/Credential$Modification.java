@@ -50,7 +50,6 @@ public class Credential$Modification {
                 }
                 i++;
             } 
-            return $1;
         }
         return $1;
     }

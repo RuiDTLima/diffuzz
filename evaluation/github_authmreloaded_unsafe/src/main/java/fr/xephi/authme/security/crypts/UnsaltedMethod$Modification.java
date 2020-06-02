@@ -82,7 +82,6 @@ public abstract class UnsaltedMethod$Modification implements EncryptionMethod {
                     }
                     i++;
                 } 
-                return $1;
             }
         }
         return $1;
