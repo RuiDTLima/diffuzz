@@ -88,8 +88,8 @@ public class Driver {
         String userTokenInvalid = userBytesString + TokenHandler.SEPARATOR + hashByteStringInvalid;
 
         String[] parts1 = userTokenValid.split("\\.");
-        byte[] userBytes1 = fromBase64(parts1[0]);
-        byte[] hash1 = fromBase64(parts1[1]);
+        byte[] userBytes1 = TokenHandler.fromBase64(parts1[0]);
+        byte[] hash1 = TokenHandler.fromBase64(parts1[1]);
         Mem.clear();
         //User userValid = th.parseUserFromToken_unsafe(userTokenValid);
         boolean equal1 = TokenHandler.unsafe_isEqual(userBytes1, hash1);
@@ -99,8 +99,8 @@ public class Driver {
         System.out.println("cost1: " + cost1);
 
         String[] parts2 = userTokenInvalid.split("\\.");
-        byte[] userBytes2 = fromBase64(parts2[0]);
-        byte[] hash2 = fromBase64(parts2[1]);
+        byte[] userBytes2 = TokenHandler.fromBase64(parts2[0]);
+        byte[] hash2 = TokenHandler.fromBase64(parts2[1]);
         Mem.clear();
         //User userInvalid = th.parseUserFromToken_unsafe(userTokenInvalid);
         boolean equal2 = TokenHandler.unsafe_isEqual(userBytes2, hash2);
