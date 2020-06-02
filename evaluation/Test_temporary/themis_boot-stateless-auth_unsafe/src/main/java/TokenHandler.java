@@ -205,7 +205,7 @@ public final class TokenHandler {
         return DatatypeConverter.printBase64Binary(content);
     }
 
-    private byte[] fromBase64(String content) {
+    public static byte[] fromBase64(String content) {
         return DatatypeConverter.parseBase64Binary(content);
     }
 
