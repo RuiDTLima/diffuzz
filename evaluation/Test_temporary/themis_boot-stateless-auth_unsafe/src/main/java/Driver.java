@@ -11,7 +11,7 @@ import com.jdriven.stateless.security.User;
 import edu.cmu.sv.kelinci.Kelinci;
 import edu.cmu.sv.kelinci.Mem;
 
-public class Driver2 {
+public class Driver {
 
     public static final boolean SAFE_MODE = false;
     public static final int MAX_USERNAME_LENGTH = 5; // characters
