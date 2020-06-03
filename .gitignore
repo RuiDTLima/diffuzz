@@ -25,6 +25,8 @@ tool/instrumentor/.settings/
 evaluation/*/fuzzer-out*
 evaluation/SucessfullExamples/*/fuzzer-out*
 !evaluation/SucessfullExamples/*/fuzzer-out-results-n*
+evaluation/Test_temporary/*/fuzzer-out*
+!evaluation/Test_temporary/*/fuzzer-out-results-n*
 evaluation/*/target
 *-log-*.txt
 *.lock
