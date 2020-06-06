@@ -28,5 +28,7 @@ evaluation/SucessfullExamples/*/fuzzer-out*
 evaluation/Test_temporary/*/fuzzer-out*
 !evaluation/Test_temporary/*/fuzzer-out-results-n*
 evaluation/*/target
+evaluation/SucessfullControlFlow/*/fuzzer-out*
+!evaluation/SucessfullControlFlow/*/fuzzer-out-results-n*
 *-log-*.txt
 *.lock
