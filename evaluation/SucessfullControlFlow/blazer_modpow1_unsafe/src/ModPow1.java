@@ -24,7 +24,7 @@ public class ModPow1 {
     }
 
     // YN added instead on inline implementation
-    public static BigInteger modPow1_unsafe(BigInteger base, BigInteger exponent, BigInteger modulus, int width) {
+    /*public static BigInteger modPow1_unsafe(BigInteger base, BigInteger exponent, BigInteger modulus, int width) {
         BigInteger s = BigInteger.valueOf(1);
         // int width = exponent.bitLength(); // use width parameter because bitlength is wrong for 0
         for (int i = 0; i < width; i++) {
@@ -33,6 +33,19 @@ public class ModPow1 {
                 // s = OptimizedMultiplier.fastMultiply(s, base).mod(modulus);
                 // s = s.multiply(base).mod(modulus); // replaced to be able to instrument multiplication
                 s = standardMultiply(s, base).mod(modulus);
+            }
+        }
+        return s;
+    }*/
+    public static BigInteger modPow1_unsafe(BigInteger base, BigInteger exponent, BigInteger modulus, int width) {
+        BigInteger $1 = BigInteger.valueOf(1);
+        BigInteger s = BigInteger.valueOf(1);
+        for (int i = 0; i < width; i++) {
+            s = s.multiply(s).mod(modulus);
+            if (exponent.testBit((width - i) - 1)) {
+                s = standardMultiply(s, base).mod(modulus);
+            } else {
+                $1 = standardMultiply(s, base).mod(modulus);
             }
         }
         return s;
