@@ -1,0 +1,306 @@
+Do you really want to run the complete evaluation? It will take around **32,5 hours**? 
+Run complete evaluation...
+[1/65] Run analysis for blazer_array_safe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (4273) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (4272) - No such process
+[2/65] Run analysis for blazer_array_safe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (11017) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (11016) - No such process
+[3/65] Run analysis for blazer_array_safe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (17994) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (17993) - No such process
+[4/65] Run analysis for blazer_array_safe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (24941) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (24940) - No such process
+[5/65] Run analysis for blazer_array_safe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (31952) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (31951) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_array_safe/fuzzer-out-1/afl/fuzzer_stats'
+[6/65] Run analysis for blazer_array_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (6666) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (6665) - No such process
+[7/65] Run analysis for blazer_array_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (13680) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (13679) - No such process
+[8/65] Run analysis for blazer_array_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (20570) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (20569) - No such process
+[9/65] Run analysis for blazer_array_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (24036) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (24035) - No such process
+[10/65] Run analysis for blazer_array_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (24442) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (24441) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_array_unsafe/fuzzer-out-1/afl/fuzzer_stats'
+[11/65] Run analysis for blazer_straightline_safe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (25237) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (25236) - No such process
+[12/65] Run analysis for blazer_straightline_safe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (26225) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (26224) - No such process
+[13/65] Run analysis for blazer_straightline_safe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (30737) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (30736) - No such process
+[14/65] Run analysis for blazer_straightline_safe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (31094) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (31093) - No such process
+[15/65] Run analysis for blazer_straightline_safe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (31310) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (31309) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_straightline_safe/fuzzer-out-1/afl/fuzzer_stats'
+[16/65] Run analysis for blazer_straightline_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (31542) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (31541) - No such process
+[17/65] Run analysis for blazer_straightline_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (31753) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (31752) - No such process
+[18/65] Run analysis for blazer_straightline_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (31961) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (31960) - No such process
+[19/65] Run analysis for blazer_straightline_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (32175) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (32174) - No such process
+[20/65] Run analysis for blazer_straightline_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (32385) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (32384) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_straightline_unsafe/fuzzer-out-1/afl/fuzzer_stats'
+[21/65] Run analysis for blazer_unixlogin_safe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (32621) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (32620) - No such process
+[22/65] Run analysis for blazer_unixlogin_safe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (386) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (385) - No such process
+[23/65] Run analysis for blazer_unixlogin_safe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (623) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (622) - No such process
+[24/65] Run analysis for blazer_unixlogin_safe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (910) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (909) - No such process
+[25/65] Run analysis for blazer_unixlogin_safe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (1202) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (1201) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_unixlogin_safe/fuzzer-out-1/afl/fuzzer_stats'
+[26/65] Run analysis for blazer_unixlogin_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (1440) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (1439) - No such process
+[27/65] Run analysis for blazer_unixlogin_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (1657) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (1656) - No such process
+[28/65] Run analysis for blazer_unixlogin_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (1869) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (1868) - No such process
+[29/65] Run analysis for blazer_unixlogin_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (2551) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (2550) - No such process
+[30/65] Run analysis for blazer_unixlogin_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (5970) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (5969) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_unixlogin_unsafe/fuzzer-out-1/afl/fuzzer_stats'
+[31/65] Run analysis for blazer_modpow1_safe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (9425) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (9424) - No such process
+[32/65] Run analysis for blazer_modpow1_safe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (12847) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (12846) - No such process
+[33/65] Run analysis for blazer_modpow1_safe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (16243) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (16242) - No such process
+[34/65] Run analysis for blazer_modpow1_safe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (19656) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (19655) - No such process
+[35/65] Run analysis for blazer_modpow1_safe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (22944) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (22943) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_modpow1_safe/fuzzer-out-1/afl/fuzzer_stats'
+[36/65] Run analysis for blazer_modpow1_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (26708) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (26707) - No such process
+[37/65] Run analysis for blazer_modpow1_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (6040) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (6039) - No such process
+[38/65] Run analysis for blazer_modpow1_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (11873) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (11872) - No such process
+[39/65] Run analysis for blazer_modpow1_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (20910) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (20909) - No such process
+[40/65] Run analysis for blazer_modpow1_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (19088) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (19087) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_modpow1_unsafe/fuzzer-out-1/afl/fuzzer_stats'
+[41/65] Run analysis for blazer_k96_safe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (9658) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (9657) - No such process
+[42/65] Run analysis for blazer_k96_safe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (15622) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (15621) - No such process
+[43/65] Run analysis for blazer_k96_safe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (18907) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (18906) - No such process
+[44/65] Run analysis for blazer_k96_safe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (32400) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (32399) - No such process
+[45/65] Run analysis for blazer_k96_safe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (14275) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (14274) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_k96_safe/fuzzer-out-1/afl/fuzzer_stats'
+[46/65] Run analysis for blazer_k96_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (849) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (848) - No such process
+[47/65] Run analysis for blazer_k96_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (1058) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (1057) - No such process
+[48/65] Run analysis for blazer_k96_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (1476) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (1475) - No such process
+[49/65] Run analysis for blazer_k96_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (1684) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (1683) - No such process
+[50/65] Run analysis for blazer_k96_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (1896) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (1895) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_k96_unsafe/fuzzer-out-1/afl/fuzzer_stats'
+[51/65] Run analysis for blazer_gpt14_safe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (2131) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (2130) - No such process
+[52/65] Run analysis for blazer_gpt14_safe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (2367) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (2366) - No such process
+[53/65] Run analysis for blazer_gpt14_safe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (2592) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (2591) - No such process
+[54/65] Run analysis for blazer_gpt14_safe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (2812) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (2811) - No such process
+[55/65] Run analysis for blazer_gpt14_safe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (3018) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (3017) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_gpt14_safe/fuzzer-out-1/afl/fuzzer_stats'
+[56/65] Run analysis for blazer_gpt14_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (3259) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (3258) - No such process
+[57/65] Run analysis for blazer_gpt14_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (3467) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (3466) - No such process
+[58/65] Run analysis for blazer_gpt14_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (3682) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (3681) - No such process
+[59/65] Run analysis for blazer_gpt14_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (3893) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (3892) - No such process
+[60/65] Run analysis for blazer_gpt14_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 115: kill: (4127) - No such process
+./run_control_flow_evaluation.sh: line 116: kill: (4126) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_gpt14_unsafe/fuzzer-out-1/afl/fuzzer_stats'
+[61/65] Run analysis for stac_ibasys_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 116: kill: (4359) - No such process
+[62/65] Run analysis for stac_ibasys_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 116: kill: (31968) - No such process
+[63/65] Run analysis for stac_ibasys_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 116: kill: (27171) - No such process
+[64/65] Run analysis for stac_ibasys_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 116: kill: (22415) - No such process
+[65/65] Run analysis for stac_ibasys_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_control_flow_evaluation.sh: line 116: kill: (17689) - No such process
+stac_ibasys_unsafe/fuzzer-out-results-n=5-t=1800-s=30.csv
