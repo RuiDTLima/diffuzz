@@ -70,9 +70,9 @@ public class ImageMatcherWorker  {
 	      }
 	   }*/
 	   public static void test(byte[] i, byte[] pcode) {
-        byte[] imagedata = null;
-        boolean success = false;
-        boolean state = false;
+		   byte[] imagedata = null;
+		   boolean success = false;
+           boolean state = false;
         try {
             System.out.println("Loading passcode");
             ScalrApplyTest b = new ScalrApplyTest();
@@ -119,3 +119,4 @@ public class ImageMatcherWorker  {
             success = false;
         }
     }
+}
