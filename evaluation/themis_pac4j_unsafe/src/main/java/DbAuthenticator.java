@@ -39,7 +39,7 @@ public class DbAuthenticator extends AbstractUsernamePasswordAuthenticator {
 
     protected String startQuery = "select username, password";
     protected String endQuery = " from users where username = :username";
-        
+    
     public void validate(UsernamePasswordCredentials arg0, WebContext arg1) throws HttpAction {
         validate_safe(arg0);
 //        validate_unsafe(arg0);

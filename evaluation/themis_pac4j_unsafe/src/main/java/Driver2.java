@@ -20,7 +20,7 @@ import edu.cmu.sv.kelinci.Mem;
 *
 * Password is actually not relevant here, but we would use the same password for both executions.
 */
-public class Driver {
+public class Driver2 {
 
     private static final int USERNAME_MAX_LENGTH = 5; // # of characters
     private static final int PASSWORD_MAX_LENGTH = 20;

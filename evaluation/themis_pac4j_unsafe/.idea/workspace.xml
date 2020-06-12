@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1c5d422b-c053-4b40-97a5-3de6897fc24e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../blazer_straightline_unsafe/src/Sanity$Modification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blazer_straightline_unsafe/src/Sanity$Modification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blazer_straightline_unsafe/src/Sanity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blazer_straightline_unsafe/src/Sanity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DbAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DbAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Driver2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Driver2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1d8WiYTQUtpKITkRtrA6CokwlxW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../testDifFuzz/Control-Flow/themis_pac4j_safe" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c5d422b-c053-4b40-97a5-3de6897fc24e" name="Default Changelist" comment="" />
+      <created>1591807327079</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591807327079</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1591807360312">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1591807360312" />
+  </component>
+</project>
