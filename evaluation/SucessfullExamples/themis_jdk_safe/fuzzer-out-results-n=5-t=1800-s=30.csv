@@ -62,5 +62,5 @@ seconds,average_delta,std_error,maximum
 1800,1.00,0.00,1
 
 time delta>0:
-6.40 (+/- 0.83)
-[10, 6, 6, 5, 5]
+13.60 (+/- 1.85)
+[15, 10, 21, 12, 10]
