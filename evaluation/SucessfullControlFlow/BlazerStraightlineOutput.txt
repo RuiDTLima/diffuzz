@@ -1,0 +1,50 @@
+Do you really want to run the complete evaluation? It will take around **5 hours**? 
+Run complete evaluation...
+[1/10] Run analysis for blazer_straightline_safe, round 1 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (27565) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (27564) - No such process
+[2/10] Run analysis for blazer_straightline_safe, round 2 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (30979) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (30978) - No such process
+[3/10] Run analysis for blazer_straightline_safe, round 3 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (2024) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (2023) - No such process
+[4/10] Run analysis for blazer_straightline_safe, round 4 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (5385) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (5384) - No such process
+[5/10] Run analysis for blazer_straightline_safe, round 5 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (8727) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (8726) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_straightline_safe/fuzzer-out-1/afl/fuzzer_stats'
+[6/10] Run analysis for blazer_straightline_unsafe, round 1 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (12084) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (12083) - No such process
+[7/10] Run analysis for blazer_straightline_unsafe, round 2 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (15434) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (15433) - No such process
+[8/10] Run analysis for blazer_straightline_unsafe, round 3 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (18815) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (18814) - No such process
+[9/10] Run analysis for blazer_straightline_unsafe, round 4 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (22184) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (22183) - No such process
+[10/10] Run analysis for blazer_straightline_unsafe, round 5 ..
+Unable to bind to port 7007
+./run_blazer_straightline_evaluation.sh: line 82: kill: (25557) - No such process
+./run_blazer_straightline_evaluation.sh: line 83: kill: (25556) - No such process
+Traceback (most recent call last):
+  File "evaluate_cost.py", line 36, in <module>
+    with open(statFilePath, 'r') as statFile:
+FileNotFoundError: [Errno 2] No such file or directory: 'blazer_straightline_unsafe/fuzzer-out-1/afl/fuzzer_stats'
