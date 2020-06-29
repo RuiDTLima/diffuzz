@@ -120,8 +120,10 @@ public class DbAuthenticator$Modification extends AbstractUsernamePasswordAuthen
             }
             final List<Map<String, Object>> results = h.createQuery(query).bind(USERNAME, username).list(2);
             if ((results == null) || results.isEmpty()) {
+                final String $1 = getPasswordEncoder().encode(credentials.getPassword());
                 throw new AccountNotFoundException("No account found for: " + username);
             } else if (results.size() > 1) {
+                final String $1 = getPasswordEncoder().encode(credentials.getPassword());
                 throw new MultipleAccountsFoundException("Too many accounts found for: " + username);
             } else {
                 final Map<String, Object> result = results.get(0);
