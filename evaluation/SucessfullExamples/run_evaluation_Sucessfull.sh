@@ -10,7 +10,7 @@ trap "exit" INT
 
 # Ask user.
 # 58 subjects, 5 times, 30min
-read -p "Do you really want to run the complete evaluation? It will take around **2 days**? " -n 1 -r
+read -p "Do you really want to run the complete evaluation? It will take around **3 days**? " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
@@ -29,73 +29,106 @@ step_size_eval=30
 declare -a subjects=(
 "apache_ftpserver_clear_safe" # Zero Day
 "apache_ftpserver_clear_unsafe"
+"apache_ftpserver_clear_unsafe_corrected"
 "blazer_passwordEq_safe"
 "blazer_passwordEq_unsafe"
+"blazer_passwordEq_unsafe_corrected"
 "example_PWCheck_safe"
 "example_PWCheck_unsafe"
+"example_PWCheck_unsafe_corrected"
 "github_authmreloaded_safe"
 "github_authmreloaded_unsafe"
+"github_authmreloaded_unsafe_corrected"
 "themis_jdk_safe"
 "themis_jdk_unsafe"
+"themis_jdk_unsafe_corrected"
 "themis_jetty_safe" # Themis
 "themis_jetty_unsafe"
+"themis_jetty_unsafe_corrected"
 "themis_tomcat_safe"
 "themis_tomcat_unsafe"
+"themis_tomcat_unsafe_corrected"
 "themis_orientdb_safe"
 "themis_orientdb_unsafe"
+"themis_orientdb_unsafe_corrected"
 "themis_picketbox_safe" # Themis
 "themis_picketbox_unsafe"
+"themis_picketbox_unsafe_corrected"
 "themis_oacc_unsafe"
+"themis_oacc_unsafe_corrected"
 "themis_boot-stateless-auth_safe"
 "themis_boot-stateless-auth_unsafe"
+"themis_boot-stateless-auth_unsafe_corrected"
 )
 
 declare -a classpaths=(
 "./bin-instr/:./lib/*" # "apache_ftpserver_clear_safe"
 "./bin-instr/:./lib/*" # "apache_ftpserver_clear_unsafe"
+"./bin-instr/:./lib/*" # "apache_ftpserver_clear_unsafe_corrected"
 "./bin-instr/" # "blazer_passwordEq_safe"
 "./bin-instr/" # "blazer_passwordEq_unsafe"
+"./bin-instr/" # "blazer_passwordEq_unsafe_corrected"
 "./bin-instr/" # "example_PWCheck_safe"
 "./bin-instr/" # "example_PWCheck_unsafe"
+"./bin-instr/" # "example_PWCheck_unsafe_corrected"
 "./bin-instr/:./lib/*" # "github_authmreloaded_safe"
 "./bin-instr/:./lib/*" # "github_authmreloaded_unsafe"
+"./bin-instr/:./lib/*" # "github_authmreloaded_unsafe_corrected"
 "./bin-instr/" # "themis_jdk_safe"
 "./bin-instr/" # "themis_jdk_unsafe"
+"./bin-instr/" # "themis_jdk_unsafe_corrected"
 "./bin-instr/" # "themis_jetty_safe"
 "./bin-instr/" # "themis_jetty_unsafe"
+"./bin-instr/" # "themis_jetty_unsafe_corrected"
 "./bin-instr/:./lib/*" # "themis_tomcat_safe"
 "./bin-instr/:./lib/*" # "themis_tomcat_unsafe"
+"./bin-instr/:./lib/*" # "themis_tomcat_unsafe_corrected"
 "./bin-instr/:./lib/*" # "themis_orientdb_safe"
 "./bin-instr/:./lib/*" # "themis_orientdb_unsafe"
+"./bin-instr/:./lib/*" # "themis_orientdb_unsafe_corrected"
 "./bin-instr/" # "themis_picketbox_safe"
 "./bin-instr/" # "themis_picketbox_unsafe"
+"./bin-instr/" # "themis_picketbox_unsafe_corrected"
 "./bin-instr/:./lib/*" # "themis_oacc_unsafe"
+"./bin-instr/:./lib/*" # "themis_oacc_unsafe_corrected"
 "./bin-instr/:./lib/*" # "themis_boot-stateless-auth_safe"
 "./bin-instr/:./lib/*" # "themis_boot-stateless-auth_unsafe"
+"./bin-instr/:./lib/*" # "themis_boot-stateless-auth_unsafe_corrected"
 )
 
 declare -a drivers=(
 "Driver_Clear" # "apache_ftpserver_clear_safe"
-"Driver_Clear2" # "apache_ftpserver_clear_unsafe"
+"Driver_Clear" # "apache_ftpserver_clear_unsafe"
+"Driver_Clear" # "apache_ftpserver_clear_unsafe_corrected"
 "User_FuzzDriver" # "blazer_passwordEq_safe"
 "User_FuzzDriver" # "blazer_passwordEq_unsafe"
+"User_FuzzDriver" # "blazer_passwordEq_unsafe_corrected"
 "Driver" # "example_PWCheck_safe"
 "Driver" # "example_PWCheck_unsafe"
+"Driver" # "example_PWCheck_unsafe_corrected"
 "Driver" # "github_authmreloaded_safe"
 "Driver" # "github_authmreloaded_unsafe"
+"Driver" # "github_authmreloaded_unsafe_corrected"
 "MessageDigest_FuzzDriver" # "themis_jdk_safe"
 "MessageDigest_FuzzDriver" # "themis_jdk_unsafe"
+"MessageDigest_FuzzDriver" # "themis_jdk_unsafe_corrected"
 "Credential_FuzzDriver" # "themis_jetty_safe"
 "Credential_FuzzDriver" # "themis_jetty_unsafe"
+"Credential_FuzzDriver" # "themis_jetty_unsaf_correctede"
 "Tomcat_FuzzDriver" # "themis_tomcat_safe"
 "Tomcat_FuzzDriver" # "themis_tomcat_unsafe"
+"Tomcat_FuzzDriver" # "themis_tomcat_unsafe_corrected"
 "OSecurityManager_FuzzDriver" # "themis_orientdb_safe"
 "OSecurityManager_FuzzDriver" # "themis_orientdb_unsafe"
+"OSecurityManager_FuzzDriver" # "themis_orientdb_unsafe_corrected"
 "UsernamePasswordLoginModule_FuzzDriver" # "themis_picketbox_safe"
 "UsernamePasswordLoginModule_FuzzDriver" # "themis_picketbox_unsafe"
+"UsernamePasswordLoginModule_FuzzDriver" # "themis_picketbox_unsafe_corrected"
 "Driver" # "themis_oacc_unsafe"
+"Driver" # "themis_oacc_unsafe_corrected"
 "Driver" # "themis_boot-stateless-auth_safe"
 "Driver" # "themis_boot-stateless-auth_unsafe"
+"Driver" # "themis_boot-stateless-auth_unsafe_corrected"
 )
 
 # Check array sizes

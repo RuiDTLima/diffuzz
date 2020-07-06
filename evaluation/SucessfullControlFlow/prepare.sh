@@ -32,6 +32,19 @@ java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.in
 cd ..
 echo ""
 
+# Prepare blazer_array_unsafe.
+echo "Prepare blazer_array_unsafe_corrected.."
+cd ./blazer_array_unsafe_corrected/
+rm -rf bin
+mkdir bin
+cd src
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar MoreSanity_Array_FuzzDriver.java -d ../bin
+cd ..
+rm -rf bin-instr
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+cd ..
+echo ""
+
 # Prepare blazer_gpt14_safe.
 echo "Prepare blazer_gpt14_safe.."
 cd ./blazer_gpt14_safe/
@@ -48,6 +61,19 @@ echo ""
 # Prepare blazer_gpt14_unsafe.
 echo "Prepare blazer_gpt14_unsafe.."
 cd ./blazer_gpt14_unsafe/
+rm -rf bin
+mkdir bin
+cd src
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar GPT14_FuzzDriver.java -d ../bin
+cd ..
+rm -rf bin-instr
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+cd ..
+echo ""
+
+# Prepare blazer_gpt14_unsafe.
+echo "Prepare blazer_gpt14_unsafe_corrected.."
+cd ./blazer_gpt14_unsafe_corrected/
 rm -rf bin
 mkdir bin
 cd src
@@ -84,6 +110,19 @@ java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.in
 cd ..
 echo ""
 
+# Prepare blazer_k96_unsafe.
+echo "Prepare blazer_k96_unsafe_corrected.."
+cd ./blazer_k96_unsafe_corrected/
+rm -rf bin
+mkdir bin
+cd src
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar K96_FuzzDriver.java -d ../bin
+cd ..
+rm -rf bin-instr
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+cd ..
+echo ""
+
 # Prepare blazer_modpow1_safe.
 echo "Prepare blazer_modpow1_safe.."
 cd ./blazer_modpow1_safe/
@@ -100,6 +139,19 @@ echo ""
 # Prepare blazer_modpow1_unsafe.
 echo "Prepare blazer_modpow1_unsafe.."
 cd ./blazer_modpow1_unsafe/
+rm -rf bin
+mkdir bin
+cd src
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar ModPow1_FuzzDriver.java -d ../bin
+cd ..
+rm -rf bin-instr
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+cd ..
+echo ""
+
+# Prepare blazer_modpow1_unsafe.
+echo "Prepare blazer_modpow1_unsafe_corrected.."
+cd ./blazer_modpow1_unsafe_corrected/
 rm -rf bin
 mkdir bin
 cd src
@@ -136,6 +188,19 @@ java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.in
 cd ..
 echo ""
 
+# Prepare blazer_straightline_unsafe.
+echo "Prepare blazer_straightline_unsafe_corrected.."
+cd ./blazer_straightline_unsafe_corrected/
+rm -rf bin
+mkdir bin
+cd src
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar Sanity_FuzzDriver.java -d ../bin
+cd ..
+rm -rf bin-instr
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+cd ..
+echo ""
+
 # Prepare blazer_unixlogin_safe.
 echo "Prepare blazer_unixlogin_safe.."
 cd ./blazer_unixlogin_safe/
@@ -162,9 +227,35 @@ java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.in
 cd ..
 echo ""
 
+# Prepare blazer_unixlogin_unsafe.
+echo "Prepare blazer_unixlogin_unsafe_corrected.."
+cd ./blazer_unixlogin_unsafe_corrected/
+rm -rf bin
+mkdir bin
+cd src
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar Timing_FuzzDriver.java -d ../bin
+cd ..
+rm -rf bin-instr
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+cd ..
+echo ""
+
 # Prepare stac_ibasys_unsafe.
 echo "Prepare stac_ibasys_unsafe.."
 cd ./stac_ibasys_unsafe/
+rm -rf bin
+mkdir bin
+cd src
+javac -cp .:../../../../tool/instrumentor/build/libs/kelinci.jar ImageMatcher_FuzzDriver.java -d ../bin
+cd ..
+rm -rf bin-instr
+java -cp ../../../tool/instrumentor/build/libs/kelinci.jar edu.cmu.sv.kelinci.instrumentor.Instrumentor -mode LABELS -i ./bin/ -o ./bin-instr -skipmain
+cd ..
+echo ""
+
+# Prepare stac_ibasys_unsafe.
+echo "Prepare stac_ibasys_unsafe_corrected.."
+cd ./stac_ibasys_unsafe_corrected/
 rm -rf bin
 mkdir bin
 cd src

@@ -10,7 +10,7 @@ trap "exit" INT
 
 # Ask user.
 # 58 subjects, 5 times, 30min
-read -p "Do you really want to run the complete evaluation? It will take around **5 hours**? " -n 1 -r
+read -p "Do you really want to run the complete evaluation? It will take around **7,5 hours**? " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
@@ -29,16 +29,19 @@ step_size_eval=30
 declare -a subjects=(
 "themis_orientdb_safe"
 "themis_orientdb_unsafe"
+"themis_orientdb_unsafe_corrected"
 )
 
 declare -a classpaths=(
 "./bin-instr/:./lib/*" # "themis_orientdb_safe"
 "./bin-instr/:./lib/*" # "themis_orientdb_unsafe"
+"./bin-instr/:./lib/*" # "themis_orientdb_unsafe_corrected"
 )
 
 declare -a drivers=(
 "OSecurityManager_FuzzDriver" # "themis_orientdb_safe"
 "OSecurityManager_FuzzDriver" # "themis_orientdb_unsafe"
+"OSecurityManager_FuzzDriver" # "themis_orientdb_unsafe_corrected"
 )
 
 # Check array sizes

@@ -110,7 +110,7 @@ public class OSecurityManager {
       return result == 0;
   }
   
-  /*public boolean equals_inline(String iPassword, String iHash) {
+  public boolean equals_inline(String iPassword, String iHash) {
       int n = iPassword.length();
       if (n == iHash.length()) {
           char v1[] = iPassword.toCharArray();
@@ -124,24 +124,7 @@ public class OSecurityManager {
           return true;
       }
       return false;
-  }*/
-  public boolean equals_inline(String iPassword, String iHash) {
-    boolean $1 = false;
-    int n = iPassword.length();
-    if (n == iHash.length()) {
-        char[] v1 = iPassword.toCharArray();
-        char[] v2 = iHash.toCharArray();
-        int i = 0;
-        $1 = true;
-        while ((n--) != 0) {
-            if ((i < v1.length) && (i < v2.length) && v1[i] != v2[i]) {
-                $1 = false;
-            }
-            i++;
-        } 
-    }
-    return $1;
-}
+  }
 
   
   /**
@@ -173,7 +156,7 @@ public class OSecurityManager {
     return isEqual_inline(digestSHA256(iPassword), digestSHA256(iHash));
   }
 
-  /*public boolean checkPassword_unsafe(final String iPassword, final String iHash) {
+  public boolean checkPassword_unsafe(final String iPassword, final String iHash) {
     if (iHash.startsWith(HASH_ALGORITHM_PREFIX)) {
       final String s = iHash.substring(HASH_ALGORITHM_PREFIX.length());
       return createSHA256(iPassword).equals(s);
@@ -192,22 +175,7 @@ public class OSecurityManager {
     // compare their hashes with a constant-time comparison method.
 //    return iPassword.equals(iHash);
     return equals_inline(iPassword, iHash);
-  }*/
-  
-  public boolean checkPassword_unsafe(final String iPassword, final String iHash) {
-    boolean $1 = equals_inline(iPassword, iHash);
-    if (iHash.startsWith(HASH_ALGORITHM_PREFIX)) {
-        final String s = iHash.substring(HASH_ALGORITHM_PREFIX.length());
-        $1 = createSHA256(iPassword).equals(s);
-    } else if (iHash.startsWith(PBKDF2_ALGORITHM_PREFIX)) {
-        final String s = iHash.substring(PBKDF2_ALGORITHM_PREFIX.length());
-        $1 = checkPasswordWithSalt(iPassword, s, PBKDF2_ALGORITHM);
-    } else if (iHash.startsWith(PBKDF2_SHA256_ALGORITHM_PREFIX)) {
-        final String s = iHash.substring(PBKDF2_SHA256_ALGORITHM_PREFIX.length());
-        $1 = checkPasswordWithSalt(iPassword, s, PBKDF2_SHA256_ALGORITHM);
-    }
-    return $1;
-}
+  }
 
   public String createSHA256(final String iInput) {
     return byteArrayToHexStr(digestSHA256(iInput));

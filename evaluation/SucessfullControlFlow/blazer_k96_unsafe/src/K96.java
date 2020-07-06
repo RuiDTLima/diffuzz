@@ -6,7 +6,7 @@ public class K96 {
  * this example was extracted from P. Kocher. "Timing attacks on implementations of Diffie-Hellman, RSA, DSS, and other systems". CRYPTO '96.
  */
     
-    /*public static BigInteger modular_exponentiation_unsafe(BigInteger y, BigInteger x, BigInteger n, int w) {
+    public static BigInteger modular_exponentiation_unsafe(BigInteger y, BigInteger x, BigInteger n, int w) {
         BigInteger s = BigInteger.ONE;
         // int w = x.bitLength();
         BigInteger r = BigInteger.ZERO;
@@ -19,22 +19,6 @@ public class K96 {
             }
             // s = r.multiply(r).mod(n);
             s = standardMultiply(r,r).mod(n);
-        }
-        return r;
-    }*/
-    public static BigInteger modular_exponentiation_unsafe(BigInteger y, BigInteger x, BigInteger n, int w) {
-        BigInteger $1 = BigInteger.ZERO;
-        BigInteger s = BigInteger.ONE;
-        BigInteger r = BigInteger.ZERO;
-        for (int k = 0; k < w; k++) {
-            if (x.testBit(k)) {
-                r = standardMultiply(s, y).mod(n);
-                $1 = s;
-            } else {
-                r = s;
-                $1 = standardMultiply(s, y).mod(n);
-            }
-            s = standardMultiply(r, r).mod(n);
         }
         return r;
     }

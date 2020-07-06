@@ -10,7 +10,7 @@ trap "exit" INT
 
 # Ask user.
 # 58 subjects, 5 times, 30min
-read -p "Do you really want to run the complete evaluation? It will take around **5 hours**? " -n 1 -r
+read -p "Do you really want to run the complete evaluation? It will take around **7,5 hours**? " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
@@ -29,16 +29,19 @@ step_size_eval=30
 declare -a subjects=(
 "blazer_array_safe" # MicroBench
 "blazer_array_unsafe"
+"blazer_array_unsafe_corrected"
 )
 
 declare -a classpaths=(
 "./bin-instr/" # "blazer_array_safe"
 "./bin-instr/" # "blazer_array_unsafe"
+"./bin-instr/" # "blazer_array_unsafe_corrected"
 )
 
 declare -a drivers=(
 "MoreSanity_Array_FuzzDriver" # blazer_array_safe"
 "MoreSanity_Array_FuzzDriver" # "blazer_array_unsafe"
+"MoreSanity_Array_FuzzDriver" # "blazer_array_unsafe_corrected"
 )
 
 # Check array sizes

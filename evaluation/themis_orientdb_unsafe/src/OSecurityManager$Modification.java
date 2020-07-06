@@ -99,6 +99,7 @@ public class OSecurityManager$Modification {
     }
 
     public boolean equals_inline$Modification(String iPassword, String iHash) {
+        boolean $2 = false;
         boolean $1 = false;
         int n = iPassword.length();
         if (n == iHash.length()) {
@@ -107,9 +108,14 @@ public class OSecurityManager$Modification {
             int i = 0;
             $1 = true;
             while ((n--) != 0) {
-                if ((i < v1.length) && (i < v2.length) && v1[i] != v2[i]) {
+                if (((i < v1.length) && (i < v2.length)) && (v1[i] != v2[i])) {
                     $1 = false;
                 }
+                i++;
+            } 
+        } else {
+            $2 = true;
+            while ((n--) != 0) {
                 i++;
             } 
         }

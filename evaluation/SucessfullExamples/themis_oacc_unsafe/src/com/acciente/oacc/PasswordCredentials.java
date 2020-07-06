@@ -51,7 +51,7 @@ public abstract class PasswordCredentials implements Credentials {
             return password;
         }
 
-        /*@Override
+        @Override
         public boolean equals(Object other) {
             if (this == other) {
                 return true;
@@ -64,24 +64,10 @@ public abstract class PasswordCredentials implements Credentials {
 
             // return Arrays.equals(password, impl.password);
             return ArraysIsEquals(password, impl.password);
-        }*/
-
-        @Override
-        public boolean equals(Object other) {
-            boolean $1;
-            if (PasswordCredentials.Impl.this == other) {
-                $1 = true;
-            }
-            if ((other == null) || (getClass() != other.getClass())) {
-                $1 = false;
-            }
-            PasswordCredentials.Impl impl = ((PasswordCredentials.Impl) (other));
-            $1 = ArraysIsEquals(password, impl.password);
-            return $1;
         }
 
         /* YN: inline */
-        /*public static boolean ArraysIsEquals(char[] a, char[] a2) {
+        public static boolean ArraysIsEquals(char[] a, char[] a2) {
             if (a == a2)
                 return true;
             if (a == null || a2 == null)
@@ -96,28 +82,6 @@ public abstract class PasswordCredentials implements Credentials {
                     return false;
 
             return true;
-        }*/
-        public static boolean ArraysIsEquals(char[] a, char[] a2) {
-            boolean $1 = true;
-            if (a == a2) {
-                $1 = true;
-            }
-            if ((a == null) || (a2 == null)) {
-                $1 = false;
-            }
-            int length = 0;
-            if (a != null)
-                length = a.length;
-
-            if ((a2 == null) || a2.length != length) {
-                $1 = false;
-            }
-            for (int i = 0; i < length; i++) {
-                if ((a == null) || (i < a.length) && (a2 == null) || (i < a2.length) && a[i] != a2[i]) {
-                    $1 = false;
-                }
-            }
-            return $1;
         }
 
         @Override

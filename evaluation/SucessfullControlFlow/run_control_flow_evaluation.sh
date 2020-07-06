@@ -10,7 +10,7 @@ trap "exit" INT
 
 # Ask user.
 # 58 subjects, 5 times, 30min
-read -p "Do you really want to run the complete evaluation? It will take around **32,5 hours**? " -n 1 -r
+read -p "Do you really want to run the complete evaluation? It will take around **2 days**? " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
@@ -29,49 +29,70 @@ step_size_eval=30
 declare -a subjects=(
 "blazer_array_safe" # MicroBench
 "blazer_array_unsafe"
+"blazer_array_unsafe_corrected"
 "blazer_straightline_safe"
 "blazer_straightline_unsafe"
+"blazer_straightline_unsafe_corrected"
 "blazer_unixlogin_safe"
 "blazer_unixlogin_unsafe"
+"blazer_unixlogin_unsafe_corrected"
 "blazer_modpow1_safe" # STAC
 "blazer_modpow1_unsafe"
+"blazer_modpow1_unsafe_corrected"
 "blazer_k96_safe" # Literature
 "blazer_k96_unsafe"
+"blazer_k96_unsafe_corrected"
 "blazer_gpt14_safe"
 "blazer_gpt14_unsafe"
+"blazer_gpt14_unsafe_corrected"
 "stac_ibasys_unsafe"
+"stac_ibasys_unsafe_corrected"
 )
 
 declare -a classpaths=(
 "./bin-instr/" # "blazer_array_safe"
 "./bin-instr/" # "blazer_array_unsafe"
+"./bin-instr/" # "blazer_array_unsafe_corrected"
 "./bin-instr/" # "blazer_straightline_safe"
 "./bin-instr/" # "blazer_straightline_unsafe"
+"./bin-instr/" # "blazer_straightline_unsafe_corrected"
 "./bin-instr/" # "blazer_unixlogin_safe"
 "./bin-instr/" # "blazer_unixlogin_unsafe"
+"./bin-instr/" # "blazer_unixlogin_unsafe_corrected"
 "./bin-instr/" # "blazer_modpow1_safe"
 "./bin-instr/" # "blazer_modpow1_unsafe"
+"./bin-instr/" # "blazer_modpow1_unsafe_corrected"
 "./bin-instr/" # "blazer_k96_safe"
 "./bin-instr/" # "blazer_k96_unsafe"
+"./bin-instr/" # "blazer_k96_unsafe_corrected"
 "./bin-instr/" # "blazer_gpt14_safe"
 "./bin-instr/" # "blazer_gpt14_unsafe"
+"./bin-instr/" # "blazer_gpt14_unsafe_corrected"
 "./bin-instr/" # "stac_ibasys_unsafe"
+"./bin-instr/" # "stac_ibasys_unsafe_corrected"
 )
 
 declare -a drivers=(
 "MoreSanity_Array_FuzzDriver" # blazer_array_safe"
 "MoreSanity_Array_FuzzDriver" # "blazer_array_unsafe"
+"MoreSanity_Array_FuzzDriver" # "blazer_array_unsafe_corrected"
 "Sanity_FuzzDriver" # "blazer_straightline_safe"
 "Sanity_FuzzDriver" # "blazer_straightline_unsafe"
+"Sanity_FuzzDriver" # "blazer_straightline_unsafe_corrected"
 "Timing_FuzzDriver" # "blazer_unixlogin_safe"
 "Timing_FuzzDriver" # "blazer_unixlogin_unsafe"
+"Timing_FuzzDriver" # "blazer_unixlogin_unsafe_corrected"
 "ModPow1_FuzzDriver" # "blazer_modpow1_safe"
 "ModPow1_FuzzDriver" # "blazer_modpow1_unsafe"
+"ModPow1_FuzzDriver" # "blazer_modpow1_unsafe_corrected"
 "K96_FuzzDriver" # "blazer_k96_safe"
 "K96_FuzzDriver" # "blazer_k96_unsafe"
+"K96_FuzzDriver" # "blazer_k96_unsafe_corrected"
 "GPT14_FuzzDriver" # "blazer_gpt14_safe"
 "GPT14_FuzzDriver" # "blazer_gpt14_unsafe"
+"GPT14_FuzzDriver" # "blazer_gpt14_unsafe_corrected"
 "ImageMatcher_FuzzDriver" # "stac_ibasys_unsafe"
+"ImageMatcher_FuzzDriver" # "stac_ibasys_unsafe_corrected"
 )
 
 # Check array sizes
