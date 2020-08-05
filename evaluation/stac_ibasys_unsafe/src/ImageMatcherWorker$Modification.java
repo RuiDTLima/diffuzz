@@ -71,7 +71,8 @@ public class ImageMatcherWorker$Modification {
     }
 
     public static void test$Modification(byte[] i, byte[] pcode) {
-        boolean $1 = false;
+        byte[] $3 = new byte[1];
+        boolean $2 = false;
         byte[] imagedata = null;
         boolean success = false;
         boolean state = false;
@@ -113,11 +114,20 @@ public class ImageMatcherWorker$Modification {
                     boolean var19 = (var18 % 2) == (var17 % 2);
                     if (!var19) {
                         success = false;
-                        break;
                     } else {
-                        $1 = false;
+                        $2 = false;
                     }
                     imagedata[var16] = ((byte) ((var19) ? 1 : 0));
+                } else {
+                    int var17 = Math.abs(imagedata[0]);
+                    int var18 = Math.abs(pcode[0]);
+                    boolean $1 = (var18 % 2) == (var17 % 2);
+                    if ($1) {
+                        $2 = false;
+                    } else {
+                        $2 = false;
+                    }
+                    $3[0] = ((byte) ((var19) ? 1 : 0));
                 }
             }
             System.out.println(" - status:" + success);

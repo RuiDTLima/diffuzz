@@ -89,7 +89,12 @@ public class SchoolCalendarServiceImpl extends HybridServiceServlet implements S
             return NO_PEOPLE;
         }
 
-        int resultCount = end - start;
+        int test1 = 0;
+        int test2 = 0;
+        int test3 = 1;
+
+        //int resultCount = end - start - test1 + test2 * test3;
+        int resultCount = end - test1 - start * test3 + test2 * test3;
         Person[] results = new Person[resultCount];
         for (int from = start, to = 0; to < resultCount; ++from, ++to) {
             results[to] = people.get(from);

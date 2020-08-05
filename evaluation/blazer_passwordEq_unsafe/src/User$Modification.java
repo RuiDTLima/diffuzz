@@ -38,8 +38,8 @@ public class User$Modification {
     }
 
     public static boolean passwordsEqual_unsafe$Modification(String a, String b) {
-        boolean $1 = true;
         boolean $2 = true;
+        boolean $1 = true;
         boolean equal = true;
         boolean shmequal = true;
         int aLen = a.length();
