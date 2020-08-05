@@ -54,10 +54,7 @@ public class SchoolCalendarServiceImpl$Modification extends HybridServiceServlet
         if (start == end) {
             return NO_PEOPLE;
         }
-        int test1 = 0;
-        int test2 = 0;
-        int test3 = 1;
-        int resultCount = ((end - test1) - (start * test3)) + (test2 * test3);
+        int resultCount = end - start;
         Person[] results = new Person[resultCount];
         for (int from = start, to = 0; to < resultCount; ++from , ++to) {
             results[to] = people.get(from);
@@ -66,9 +63,12 @@ public class SchoolCalendarServiceImpl$Modification extends HybridServiceServlet
     }
 
     public Person[] getPeople_unsafe$Modification(int startIndex, int maxCount) {
+        int $4 = 0;
+        int $3 = startIndex;
         Person[] $1;
         Person[] results;
         int peopleCount = people.size();
+        int $2 = Math.min(startIndex + maxCount, peopleCount);
         int start = startIndex;
         if (start >= peopleCount) {
             results = NO_PEOPLE;
@@ -81,10 +81,12 @@ public class SchoolCalendarServiceImpl$Modification extends HybridServiceServlet
         } else {
             $1 = NO_PEOPLE;
         }
-        int test1 = 0;
-        int test2 = 0;
-        int test3 = 1;
-        int resultCount = ((end - test1) - (start * test3)) + (test2 * test3);
+        int resultCount = 0;
+        if ((!(start == end)) && ((!(start >= peopleCount)) && (!(start == end)))) {
+            resultCount = end - start;
+        } else {
+            $4 = $2 - $3;
+        }
         results = new Person[resultCount];
         for (int from = start, to = 0; to < resultCount; ++from , ++to) {
             results[to] = people.get(from);

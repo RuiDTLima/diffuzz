@@ -95,8 +95,8 @@ public final class TokenHandler {
     }
 
     public static boolean unsafe_isEqual(byte[] a, byte[] a2) {
-        boolean $2 = true;
         int $3 = 0;
+        boolean $2 = true;
         boolean $1 = true;
         if (a == a2) {
             $1 = true;
