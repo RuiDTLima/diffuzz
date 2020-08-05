@@ -70,31 +70,21 @@ public class ClearTextPasswordEncryptor$Modification implements PasswordEncrypto
                 while ((n--) != 0) {
                     if (((i < v1.length) && (i < v2.length)) && (v1[i] != v2[i])) {
                         $1 = false;
+                    } else {
+                        $2 = false;
                     }
                     i++;
                 } 
+            } else {
+                char[] $4 = thisObject.toCharArray();
+                int $5 = 0;
+                $2 = true;
+                while (($3--) != 0) {
+                    $5++;
+                } 
             }
-        } else if (n == anotherString.length()) {
-            char[] v1 = thisObject.toCharArray();
-            char[] v2 = anotherString.toCharArray();
-            int i = 0;
-            $1 = true;
-            while ((n--) != 0) {
-                if (((i < v1.length) && (i < v2.length)) && (v1[i] != v2[i])) {
-                    $1 = false;
-                }
-                i++;
-            } 
         } else {
-            $2 = true;
-            while ((n--) != 0) {
-                if (((i < v1.length) && (i < v2.length)) && (v1[i] != v2[i])) {
-                    $1 = false;
-                } else {
-                    $2 = false;
-                }
-                i++;
-            } 
+            int $3 = thisObject.length();
         }
         return $1;
     }

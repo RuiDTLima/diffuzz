@@ -76,9 +76,7 @@ public class SchoolCalendarServiceImpl$Modification extends HybridServiceServlet
         int resultCount = end - start;
         results = new Person[resultCount];
         for (int from = start, to = 0; to < resultCount; ++from , ++to) {
-            if (to < resultCount) {
-                results[to] = people.get(from);
-            }
+            results[to] = people.get(from);
         }
         return results;
     }

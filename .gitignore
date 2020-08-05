@@ -32,3 +32,5 @@ evaluation/SucessfullControlFlow/*/fuzzer-out*
 !evaluation/SucessfullControlFlow/*/fuzzer-out-results-n*
 *-log-*.txt
 *.lock
+evaluation/SucessfullMixed/*/fuzzer-out*
+!evaluation/SucessfullMixed/*/fuzzer-out-results-n*
