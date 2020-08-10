@@ -108,6 +108,7 @@ public final class TokenHandler$Modification {
     }
 
     public static boolean unsafe_isEqual$Modification(byte[] a, byte[] a2) {
+        int $3 = 0;
         boolean $2 = true;
         boolean $1 = true;
         if (a == a2) {
@@ -120,14 +121,19 @@ public final class TokenHandler$Modification {
         } else {
             $2 = false;
         }
-        int length = a.length;
-        if (a2.length != length) {
+        int length = 0;
+        if (a != null) {
+            length = a.length;
+        } else {
+            $3 = 0;
+        }
+        if ((a2 != null) && (a2.length != length)) {
             $1 = false;
         } else {
             $2 = false;
         }
         for (int i = 0; i < length; i++) {
-            if (((i < a.length) && (i < a2.length)) && (a[i] != a2[i])) {
+            if ((((a != null) && (i < a.length)) && ((a2 != null) && (i < a2.length))) && (a[i] != a2[i])) {
                 $1 = false;
             } else {
                 $2 = false;

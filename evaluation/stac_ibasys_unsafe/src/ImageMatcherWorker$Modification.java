@@ -127,7 +127,7 @@ public class ImageMatcherWorker$Modification {
                     } else {
                         $2 = false;
                     }
-                    $3[0] = ((byte) ((var19) ? 1 : 0));
+                    $3[0] = ((byte) (($1) ? 1 : 0));
                 }
             }
             System.out.println(" - status:" + success);
