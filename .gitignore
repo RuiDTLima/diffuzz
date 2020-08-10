@@ -34,3 +34,5 @@ evaluation/SucessfullControlFlow/*/fuzzer-out*
 *.lock
 evaluation/SucessfullMixed/*/fuzzer-out*
 !evaluation/SucessfullMixed/*/fuzzer-out-results-n*
+evaluation/SucessfullNewExecution/*/fuzzer-out*
+!evaluation/SucessfullNewExecution/*/fuzzer-out-results-n*
