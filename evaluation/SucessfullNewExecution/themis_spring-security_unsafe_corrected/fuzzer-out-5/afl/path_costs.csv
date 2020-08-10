@@ -1,0 +1,25 @@
+Input file; Time; Memory; Instr.; User-Defined
+fuzzer-out-5/afl/queue/id:000000,orig:example.txt; 1372929; 1007157248; 63; 0
+fuzzer-out-5/afl/queue/id:000001,src:000000,op:havoc,rep:2,highscore; 1423033; 1007157248; 63; 16
+fuzzer-out-5/afl/queue/id:000002,src:000000,op:havoc,rep:64; 1701308; 1007157248; 147; 4
+fuzzer-out-5/afl/queue/id:000003,src:000000,op:havoc,rep:2,+cov; 1564125; 1007157248; 55; 8
+fuzzer-out-5/afl/queue/id:000004,src:000000,op:havoc,rep:128,+cov; 1764392; 1007157248; 111; 0
+fuzzer-out-5/afl/queue/id:000005,src:000000,op:havoc,rep:32; 1404532; 1007157248; 39; 0
+fuzzer-out-5/afl/queue/id:000006,src:000000,op:havoc,rep:4,highscore; 1571115; 1007157248; 67; 40
+fuzzer-out-5/afl/queue/id:000007,src:000000,op:havoc,rep:16; 1534155; 1007157248; 35; 16
+fuzzer-out-5/afl/queue/id:000008,src:000000,op:havoc,rep:128; 1791559; 1007157248; 195; 8
+fuzzer-out-5/afl/queue/id:000009,src:000000,op:havoc,rep:128; 1375700; 1007157248; 51; 0
+fuzzer-out-5/afl/queue/id:000010,src:000000,op:havoc,rep:128; 1392693; 1007157248; 31; 8
+fuzzer-out-5/afl/queue/id:000011,src:000000,op:havoc,rep:128,+cov; 1199634; 1007157248; 38; 0
+fuzzer-out-5/afl/queue/id:000012,src:000000,op:havoc,rep:4; 1473444; 1007157248; 51; 0
+fuzzer-out-5/afl/queue/id:000013,src:000000,op:havoc,rep:16; 1146467; 1007157248; 123; 8
+fuzzer-out-5/afl/queue/id:000014,src:000000+000013,op:splice,rep:16; 1422651; 1007157248; 207; 8
+fuzzer-out-5/afl/queue/id:000015,src:000006,op:havoc,rep:16,highscore; 1204786; 1007157248; 67; 76
+fuzzer-out-5/afl/queue/id:000016,src:000006+000014,op:splice,rep:4,highscore; 1478059; 1007157248; 219; 80
+fuzzer-out-5/afl/queue/id:000017,src:000006+000015,op:splice,rep:8; 1597045; 1007157248; 167; 8
+fuzzer-out-5/afl/queue/id:000018,src:000001+000016,op:splice,rep:2,highscore; 1472540; 1007157248; 219; 96
+fuzzer-out-5/afl/queue/id:000019,src:000007+000016,op:splice,rep:2,highscore; 1436397; 1007157248; 219; 104
+fuzzer-out-5/afl/queue/id:000020,src:000010+000019,op:splice,rep:2,highscore; 1352730; 1007157248; 219; 108
+fuzzer-out-5/afl/queue/id:000021,src:000010+000019,op:splice,rep:2,highscore; 1357053; 1007157248; 219; 112
+fuzzer-out-5/afl/queue/id:000022,src:000021,op:havoc,rep:2,highscore; 1481495; 1007157248; 219; 116
+fuzzer-out-5/afl/queue/id:000023,src:000022+000016,op:splice,rep:2,highscore; 1397835; 1007157248; 219; 120

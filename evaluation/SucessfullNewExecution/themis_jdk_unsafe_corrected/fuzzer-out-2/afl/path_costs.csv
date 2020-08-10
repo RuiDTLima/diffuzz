@@ -1,0 +1,19 @@
+Input file; Time; Memory; Instr.; User-Defined
+fuzzer-out-2/afl/queue/id:000000,orig:example.txt; 1390346; 1007157248; 36; 0
+fuzzer-out-2/afl/queue/id:000001,src:000000,op:havoc,rep:4,+cov; 1566529; 1007157248; 36; 0
+fuzzer-out-2/afl/queue/id:000002,src:000000,op:havoc,rep:32; 1736462; 1007157248; 80; 0
+fuzzer-out-2/afl/queue/id:000003,src:000000,op:havoc,rep:32; 1577949; 1007157248; 20; 0
+fuzzer-out-2/afl/queue/id:000004,src:000000,op:havoc,rep:8; 1473828; 1007157248; 44; 0
+fuzzer-out-2/afl/queue/id:000005,src:000000,op:havoc,rep:2; 1269932; 1007157248; 16; 0
+fuzzer-out-2/afl/queue/id:000006,src:000000,op:havoc,rep:8; 1590875; 1007157248; 80; 0
+fuzzer-out-2/afl/queue/id:000007,src:000000,op:havoc,rep:128; 1357833; 1007157248; 12; 0
+fuzzer-out-2/afl/queue/id:000008,src:000000,op:havoc,rep:64; 1595098; 1007157248; 44; 0
+fuzzer-out-2/afl/queue/id:000009,src:000000,op:havoc,rep:16; 1488368; 1007157248; 16; 0
+fuzzer-out-2/afl/queue/id:000010,src:000000,op:havoc,rep:32; 1990281; 1007157248; 112; 0
+fuzzer-out-2/afl/queue/id:000011,src:000000,op:havoc,rep:64; 1673380; 1007157248; 120; 0
+fuzzer-out-2/afl/queue/id:000012,src:000000,op:havoc,rep:64; 1668700; 1007157248; 164; 0
+fuzzer-out-2/afl/queue/id:000013,src:000000,op:havoc,rep:64; 1504470; 1007157248; 168; 0
+fuzzer-out-2/afl/queue/id:000014,src:000000,op:havoc,rep:32; 1451628; 1007157248; 192; 0
+fuzzer-out-2/afl/queue/id:000015,src:000001+000007,op:splice,rep:128; 2707778; 1007157248; 652; 0
+fuzzer-out-2/afl/queue/id:000016,src:000004+000012,op:splice,rep:128; 2065906; 1007157248; 700; 0
+fuzzer-out-2/afl/queue/id:000017,src:000008+000015,op:splice,rep:4; 2730568; 1007157248; 776; 0

@@ -1,0 +1,27 @@
+start_time        : 1596684439
+last_update       : 1596686239
+fuzzer_pid        : 15345
+cycles_done       : 0
+execs_done        : 13473
+execs_per_sec     : 7.49
+paths_total       : 25
+paths_favored     : 3
+paths_found       : 24
+paths_imported    : 0
+max_depth         : 3
+cur_path          : 22
+pending_favs      : 2
+pending_total     : 23
+variable_paths    : 0
+stability         : 100.00%
+bitmap_cvg        : 0.05%
+unique_crashes    : 1
+unique_hangs      : 0
+last_path         : 1596686030
+last_crash        : 1596684439
+last_hang         : 0
+execs_since_crash : 13420
+exec_timeout      : 999999999
+afl_banner        : afl
+afl_version       : 2.51bWCA
+command_line      : ../../../tool/afl-2.51b-wca/afl-fuzz -i in_dir -o fuzzer-out-4 -c userdefined -S afl -t 999999999 ../../../tool/fuzzerside/interface @@
