@@ -11,12 +11,14 @@ public class ImageMatcherWorker  {
 	  public String user;
 	  String errorcode = "";
 	  StringBuffer error = new StringBuffer();
-	  boolean success = false;
-	
-	   public static void test(byte[] i, byte[] pcode) {
-		   byte[] imagedata = null;
-		   boolean success = false;
-           boolean state = false;
+      boolean success = false;
+
+      public static void test(byte[] i, byte[] pcode) {
+        byte[] $3 = new byte[1];
+        boolean $2 = false;
+        byte[] imagedata = null;
+        boolean success = false;
+        boolean state = false;
         try {
             System.out.println("Loading passcode");
             ScalrApplyTest b = new ScalrApplyTest();
@@ -49,14 +51,27 @@ public class ImageMatcherWorker  {
         if (state) {
             success = true;
             for (int var16 = 0; (var16 < imagedata.length) && (var16 < i.length); var16 += 4) {
-                int var17 = Math.abs(imagedata[var16]);
-                int var18 = Math.abs(pcode[var16]);
-                boolean var19 = (var18 % 2) == (var17 % 2);
-                if (!var19) {
-                    success = false;
-                    break;
+                if ((var16 < imagedata.length) && (var16 < pcode.length)) {
+                    int var17 = Math.abs(imagedata[var16]);
+                    int var18 = Math.abs(pcode[var16]);
+                    boolean var19 = (var18 % 2) == (var17 % 2);
+                    if (!var19) {
+                        success = false;
+                    } else {
+                        $2 = false;
+                    }
+                    imagedata[var16] = ((byte) ((var19) ? 1 : 0));
+                } else {
+                    int var17 = Math.abs(imagedata[0]);
+                    int var18 = Math.abs(pcode[0]);
+                    boolean $1 = (var18 % 2) == (var17 % 2);
+                    if ($1) {
+                        $2 = false;
+                    } else {
+                        $2 = false;
+                    }
+                    $3[0] = ((byte) (($1) ? 1 : 0));
                 }
-                imagedata[var16] = ((byte) ((var19) ? 1 : 0));
             }
             System.out.println(" - status:" + success);
         } else {
