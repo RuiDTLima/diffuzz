@@ -81,13 +81,12 @@ public class Md5PasswordEncryptor implements PasswordEncryptor {
         char pa[] = other.toCharArray();
         int po = ooffset;
         // Note: toffset, ooffset, or len might be near -1>>>1.
-        if ((ooffset < 0) || (toffset < 0) || (toffset > (long) thisValue.length() - len)
-                || (ooffset > (long) other.length() - len)) {
+        if ((ooffset < 0) || (toffset < 0) || (toffset > (long) thisValue.length() - len) || (ooffset > (long) other.length() - len)) {
             return false;
         }
         while (len-- > 0) {
-            char c1 = ta[to++];
-            char c2 = pa[po++];
+            char c1 = ta[toffset++];
+            char c2 = pa[ooffset++];
             if (c1 == c2) {
                 continue;
             }

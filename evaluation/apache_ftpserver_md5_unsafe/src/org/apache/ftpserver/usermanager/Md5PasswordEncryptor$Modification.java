@@ -42,8 +42,8 @@ public class Md5PasswordEncryptor$Modification implements PasswordEncryptor {
             return false;
         }
         while ((len--) > 0) {
-            char c1 = ta[to++];
-            char c2 = pa[po++];
+            char c1 = ta[toffset++];
+            char c2 = pa[ooffset++];
             if (c1 == c2) {
                 continue;
             }
@@ -75,8 +75,14 @@ public class Md5PasswordEncryptor$Modification implements PasswordEncryptor {
             $2 = false;
         }
         while ((len--) > 0) {
-            char c1 = ta[to++];
-            char c2 = pa[po++];
+            char c1 = 0;
+            if ( && (!((((ooffset < 0) || (toffset < 0)) || (toffset > (((long) (thisValue.length())) - len))) || (ooffset > (((long) (other.length())) - len))))) {
+                c1 = ta[toffset++];
+            }
+            char c2 = 0;
+            if ( && (!((((ooffset < 0) || (toffset < 0)) || (toffset > (((long) (thisValue.length())) - len))) || (ooffset > (((long) (other.length())) - len))))) {
+                c2 = pa[ooffset++];
+            }
             if (c1 == c2) {
                 continue;
             }
