@@ -69,3 +69,6 @@ The script `evaluate_cost.py` provides the aggregation of several experiment run
 
 ## License
 This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details
+
+# For use with DifFuzzAR
+This repository was used to hold the examples of DifFuzz that were tested with [DifFuzzAR](https://github.com/RuiDTLima/DifFuzzAR). During the development of DifFuzz, the examples were used as they apeared in the evaluation folder, and in there still is the changes made to the examples. Including the correction of vulnerabilities, when applicable, and the various iterations of the Drivers, when they were not properly formated. To see the tests performed to obtain the results present in the README of DifFuzzAR, check the folders **Examples_Early_Exit**, **Examples_Control_Flow** and **Examples_Mixed**. In those folders are the examples that suffer from that type of *timing side-channel vulnerability*. To replicate the tests, simply execute the script *prepare.sh* of the folder with the type of vulnerability you want to test, and execute the script *run_complete_evaluation.sh* to test all examples of that type of timing side-channel. On the other hand, if you want to test a specific example it is provided scripts to run a specific example, simply go to the folder that contains that example, and execute the correspondent script.
